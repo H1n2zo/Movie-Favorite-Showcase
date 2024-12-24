@@ -1,0 +1,172 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+header {
+    background-color: #32CD32;
+    color: white;
+    padding: 15px;
+    text-align: left;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.nav-links li {
+    margin: 0 15px;
+    position: relative;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #32CD32;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #3e8e41;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.container {
+    padding: 20px;
+}
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.profile img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+.profile h1 {
+    margin: 10px 0;
+}
+.profile p {
+    color: #555;
+}
+
+.movie-frames {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.movie-frame {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.movie-frame img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+h2{
+    font-size: 40px;
+}
+
+@media (min-width: 1024px) {
+    .introduction-message {
+        font-size: 1.2em; /* Increase font size for laptop view */
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+
+    .container {
+        padding: 60px; /* Further increase padding for laptop view */
+        max-width: 1400px; /* Optionally set a larger max-width */
+        margin: 0 auto; /* Center the container */
+    }
+
+    .profile img {
+        width: 250px; /* Further increase image size for laptop view */
+        height: 250px; /* Further increase image size for laptop view */
+    }
+
+    .profile h1 {
+        font-size: 2.5em; /* Further increase font size for laptop view */
+    }
+
+    .profile p {
+        font-size: 1.5em; /* Further increase font size for laptop view */
+    }
+}
+
+@media (max-width: 320px) {
+    .introduction-message {
+        font-size: 1em; /* Decrease font size for phone view */
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .container {
+        padding: 10px; /* Decrease padding for phone view */
+    }
+
+    .profile img {
+        width: 150px; /* Decrease image size for phone view */
+        height: 150px;
+    }
+
+    .profile h1 {
+        font-size: 1.5em; /* Decrease font size for phone view */
+    }
+
+    .profile p {
+        font-size: 1em; /* Decrease font size for phone view */
+    }
+
+    .artist-dropdown {
+        left: -100px; /* Align artist dropdown content to the left */
+    }
+
+    .movie-frames {
+        flex-direction: column; /* Stack movie frames vertically on phone view */
+        padding: 10px;
+    }
+
+    .movie-frame {
+        width: 85%; /* Make movie frames full width on phone view */
+        margin: 10px 0;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+}
